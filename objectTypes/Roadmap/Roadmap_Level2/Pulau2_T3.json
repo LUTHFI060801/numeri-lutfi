@@ -1,0 +1,74 @@
+{
+	"name": "Pulau2_T3",
+	"plugin-id": "Sprite",
+	"sid": 996979277027307,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 217682321838083
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 356,
+						"height": 356,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3996096,
+						"collisionPoly": {
+							"points": [
+								0.4887640449438202,
+								0.03651685393258427,
+								0.901685393258427,
+								0.28651685393258425,
+								0.9915730337078652,
+								0.46348314606741575,
+								0.9213483146067416,
+								0.6348314606741573,
+								0.8342696629213483,
+								0.7415730337078652,
+								0.6404494382022472,
+								0.9325842696629213,
+								0.5056179775280899,
+								1,
+								0.3595505617977528,
+								0.9550561797752809,
+								0.27247191011235955,
+								0.8848314606741573,
+								0.05056179775280899,
+								0.6460674157303371,
+								0.0449438202247191,
+								0.3342696629213483,
+								0.15168539325842698,
+								0.2050561797752809
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 432550415413435,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

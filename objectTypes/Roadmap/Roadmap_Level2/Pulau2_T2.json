@@ -1,0 +1,68 @@
+{
+	"name": "Pulau2_T2",
+	"plugin-id": "Sprite",
+	"sid": 857910750190417,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 412953299928520
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 359,
+						"height": 296,
+						"originX": 0.5,
+						"originY": 0.46114864864864863,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5711470,
+						"collisionPoly": {
+							"points": [
+								0.2116991643454039,
+								0.006756756756756757,
+								0.9108635097493036,
+								0.11148648648648649,
+								0.9944289693593314,
+								0.2905405405405405,
+								0.9888579387186629,
+								0.48986486486486486,
+								0.924791086350975,
+								0.5844594594594594,
+								0.5626740947075209,
+								0.9932432432432432,
+								0.5125348189415041,
+								0.9932432432432432,
+								0.002785515320334262,
+								0.4391891891891892,
+								0.0584958217270195,
+								0.16216216216216217
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 175220074238413,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

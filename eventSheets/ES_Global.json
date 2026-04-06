@@ -12,6 +12,36 @@
 			"sid": 823114908700331
 		},
 		{
+			"eventType": "variable",
+			"name": "IsGameOver",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 233069845156157
+		},
+		{
+			"eventType": "variable",
+			"name": "timer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Timer countdown dalam detik (2 menit)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 289090886991241
+		},
+		{
+			"eventType": "variable",
+			"name": "score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Jumlah item yang berhasil dikelompokkan",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 115256987724284
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Common Config",
@@ -35,9 +65,9 @@
 					"actions": [
 						{
 							"callFunction": "GoToLayoutFunction",
-							"sid": 635649314255574,
+							"sid": 795911773430030,
 							"parameters": [
-								"\"Lay_RoadMap\""
+								"\"Lay_RoadMap_Level2\""
 							]
 						}
 					],
@@ -139,40 +169,80 @@
 							"type": "number",
 							"initialValue": "0",
 							"comment": "",
-							"sid": 459021278838276
+							"sid": 910379508094487
 						}
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
-					"sid": 524981575406434
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 215363748717800,
+							"parameters": {
+								"variable": "timer",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 942936502060520,
+							"parameters": {
+								"variable": "timer",
+								"value": "duration"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 200314076585333,
+							"parameters": {
+								"variable": "IsGameOver",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 942869862992379
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 364357754646939,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						},
+						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 167804120481507
+							"sid": 464076509598412
 						}
 					],
-					"actions": [],
-					"sid": 648921199925771
-				},
-				{
-					"eventType": "block",
-					"conditions": [],
 					"actions": [
 						{
-							"id": "set-font-color",
-							"objectClass": "TImer",
-							"sid": 328362836252085,
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 401523206455248,
 							"parameters": {
-								"color": "rgb(255, 0, 0)"
+								"variable": "timer",
+								"value": "dt"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TImer",
+							"sid": 968079347081179,
+							"parameters": {
+								"text": "zeropad(floor(Timer / 60), 2) & \":\" & zeropad(floor(Timer % 60), 2)"
 							}
 						}
 					],
-					"sid": 621529304660571
+					"sid": 257103523715138
 				}
 			],
 			"sid": 974570760356432
@@ -412,9 +482,27 @@
 					"conditions": [],
 					"actions": [
 						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 127331969736448,
+							"parameters": {
+								"variable": "IsGameOver",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 297114605068210,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "TransparantOverlay",
-							"sid": 496259198346633,
+							"sid": 972178458866910,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -422,7 +510,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 545798121698546,
+							"sid": 953040791342377,
 							"parameters": {
 								"seconds": "2.0",
 								"use-timescale": true
@@ -431,7 +519,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 927020459433163,
+							"sid": 773351983651904,
 							"parameters": {
 								"audio-file": {
 									"path": "ready"
@@ -445,7 +533,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Ready",
-							"sid": 496325748168659,
+							"sid": 303107272977295,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -463,7 +551,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 953334630183048,
+							"sid": 752979263254617,
 							"parameters": {
 								"seconds": "1.3",
 								"use-timescale": true
@@ -472,7 +560,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Ready",
-							"sid": 490777766692055,
+							"sid": 222674214879845,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -490,7 +578,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 993651010910987,
+							"sid": 115248003996027,
 							"parameters": {
 								"seconds": "0.5",
 								"use-timescale": true
@@ -499,7 +587,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Go",
-							"sid": 482411062956733,
+							"sid": 420516237966022,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -517,7 +605,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 958835534785857,
+							"sid": 430981425733929,
 							"parameters": {
 								"audio-file": {
 									"path": "go"
@@ -531,7 +619,7 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 799414580288803,
+							"sid": 353129705609443,
 							"parameters": {
 								"seconds": "1.3",
 								"use-timescale": true
@@ -540,7 +628,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Go",
-							"sid": 666628699399473,
+							"sid": 731911280924810,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -558,13 +646,22 @@
 						{
 							"id": "set-visible",
 							"objectClass": "TransparantOverlay",
-							"sid": 444561836324954,
+							"sid": 864879400363544,
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 256360053403166,
+							"parameters": {
+								"variable": "IsGameOver",
+								"value": "false"
+							}
 						}
 					],
-					"sid": 241635687324612
+					"sid": 650574450378055
 				}
 			],
 			"sid": 795624493399232
@@ -589,7 +686,7 @@
 							"type": "string",
 							"initialValue": "",
 							"comment": "",
-							"sid": 289981892528128
+							"sid": 791774026614313
 						}
 					],
 					"eventType": "function-block",
@@ -598,7 +695,7 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 909352260686717,
+							"sid": 944955693322080,
 							"parameters": {
 								"variable": "NextLayoutName",
 								"value": "LevelLayoutName"
@@ -607,12 +704,12 @@
 						{
 							"id": "stop-all",
 							"objectClass": "Audio",
-							"sid": 442358385462218
+							"sid": 721025892602630
 						},
 						{
 							"id": "set-visible",
 							"objectClass": "TransparantOverlay",
-							"sid": 401432720853484,
+							"sid": 910134037558894,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -620,7 +717,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 477582623637912,
+							"sid": 487230643581159,
 							"parameters": {
 								"audio-file": {
 									"path": "Level2/menang"
@@ -634,7 +731,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "WinNotif",
-							"sid": 521973853213549,
+							"sid": 565959947224486,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -652,7 +749,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "home",
-							"sid": 617733286019243,
+							"sid": 820985523156026,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -670,7 +767,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "next",
-							"sid": 629954809608550,
+							"sid": 821949394463219,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -684,9 +781,18 @@
 								"ping-pong": "no",
 								"repeat-count": "1"
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 208906457678461,
+							"parameters": {
+								"variable": "IsGameOver",
+								"value": "true"
+							}
 						}
 					],
-					"sid": 845022297987941
+					"sid": 383103353002684
 				}
 			],
 			"sid": 227248756575249
@@ -712,12 +818,21 @@
 						{
 							"id": "stop-all",
 							"objectClass": "Audio",
-							"sid": 183491928282917
+							"sid": 490609945636570
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 466050899136029,
+							"parameters": {
+								"variable": "IsGameOver",
+								"value": "true"
+							}
 						},
 						{
 							"id": "set-visible",
 							"objectClass": "TransparantOverlay",
-							"sid": 121940384603255,
+							"sid": 565105082909336,
 							"parameters": {
 								"visibility": "visible"
 							}
@@ -725,7 +840,7 @@
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 787298418130132,
+							"sid": 961509456782736,
 							"parameters": {
 								"audio-file": {
 									"path": "Level2/jawaban salah-variasi-1"
@@ -739,7 +854,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "LoseNotif",
-							"sid": 243520549290688,
+							"sid": 120807323108569,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -757,7 +872,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "home",
-							"sid": 634218658863317,
+							"sid": 309195427973659,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -775,7 +890,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Retry",
-							"sid": 660547334762116,
+							"sid": 582303953558417,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -791,7 +906,7 @@
 							}
 						}
 					],
-					"sid": 557249509136893
+					"sid": 506700267417311
 				}
 			],
 			"sid": 427535136300611

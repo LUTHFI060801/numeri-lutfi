@@ -1,0 +1,16 @@
+{
+	"name": "UntitledDesign2",
+	"plugin-id": "SVGPicture",
+	"sid": 178783407053658,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 479201314932851
+		}
+	],
+	"effectTypes": []
+}

@@ -1,0 +1,133 @@
+{
+	"name": "ES_RoadMap_Level2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 690868878073869
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 164025952796297,
+					"parameters": {
+						"audio-file": {
+							"path": "MainTheme"
+						},
+						"loop": "looping",
+						"volume": "1",
+						"stereo-pan": "0",
+						"tag-optional": "\"MainTheme\""
+					}
+				}
+			],
+			"sid": 819649373855171
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-mouse-wheel",
+					"objectClass": "Mouse",
+					"sid": 365331225553404,
+					"parameters": {
+						"direction": "down"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CameraFocus",
+					"sid": 117925703750346,
+					"parameters": {
+						"y": "Self.Y + 40"
+					}
+				}
+			],
+			"sid": 383899998531431
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-mouse-wheel",
+					"objectClass": "Mouse",
+					"sid": 678284035820214,
+					"parameters": {
+						"direction": "up"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CameraFocus",
+					"sid": 444630729349239,
+					"parameters": {
+						"y": "Self.Y - 40"
+					}
+				}
+			],
+			"sid": 732816496185490
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 618392817004378,
+					"parameters": {
+						"key": 40
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CameraFocus",
+					"sid": 309163120633156,
+					"parameters": {
+						"y": "Self.Y + 40"
+					}
+				}
+			],
+			"sid": 499122105103311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 974725068876150,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CameraFocus",
+					"sid": 663718264334363,
+					"parameters": {
+						"y": "Self.Y - 40"
+					}
+				}
+			],
+			"sid": 277554192865087
+		}
+	],
+	"sid": 901847413270461
+}

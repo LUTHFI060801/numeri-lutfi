@@ -1,0 +1,56 @@
+{
+	"name": "Bg_Roadmap_Level2",
+	"plugin-id": "Sprite",
+	"sid": 822185153037442,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1244,
+						"height": 2240,
+						"originX": 0.4662379421221865,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6703757,
+						"collisionPoly": {
+							"points": [
+								0.2347266881028939,
+								0.0004464285714285714,
+								0.9951768488745981,
+								0.13883928571428572,
+								0.952572347266881,
+								0.9964285714285714,
+								0.00482315112540193,
+								0.96875,
+								0.005627009646302251,
+								0.134375,
+								0.07395498392282958,
+								0.0008928571428571428
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 347434443575812,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
