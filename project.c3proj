@@ -1,0 +1,570 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 46602,
+	"name": "NUMERI",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "742k8d8ei2v",
+	"objectTypes": {
+		"items": [
+			"Mouse",
+			"Keyboard",
+			"Audio"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Awan1",
+					"Awan2",
+					"Awan3",
+					"AwanRumah",
+					"BG_RoadMap",
+					"BG_RoadMap2",
+					"BTN_1",
+					"BTN_10",
+					"BTN_11",
+					"BTN_12",
+					"BTN_13",
+					"BTN_14",
+					"BTN_15",
+					"BTN_2",
+					"BTN_3",
+					"BTN_4",
+					"BTN_5",
+					"BTN_6",
+					"BTN_7",
+					"BTN_8",
+					"BTN_9",
+					"BTN_MusicOff",
+					"BTN_MusicOn",
+					"BTN_SoundOff",
+					"BTN_SoundOn",
+					"CameraFocus",
+					"PulauKamarTidur",
+					"PulauKebunBinatang",
+					"PulauKelas"
+				],
+				"subfolders": [],
+				"name": "Roadmap"
+			},
+			{
+				"items": [
+					"MainTitle",
+					"Numa",
+					"Numi",
+					"StartButton",
+					"BG_MainMenu"
+				],
+				"subfolders": [],
+				"name": "MainMenu"
+			},
+			{
+				"items": [
+					"TransparantOverlay",
+					"WinNotif",
+					"Wipe1",
+					"Wipe2",
+					"Ready",
+					"Retry",
+					"PuzzleHolder",
+					"BannerTimer",
+					"Go",
+					"home",
+					"LoseNotif",
+					"TImer",
+					"next"
+				],
+				"subfolders": [],
+				"name": "ShareAsset"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Lay_MainMenu"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"ES_MainMenu",
+			"ES_Global"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "MainTheme.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 194585541451060,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "go.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 290134138538550,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "ready.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 257057198552987,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "Success.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 182023544196584,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "PuzzlePiece.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 507180209305181,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [
+						{
+							"items": [
+								{
+									"name": "satu.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 300687750867791,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "dua.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 570682507159495,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "tiga.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 458110482023566,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "empat.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 298559615019083,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "lima.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 182491752373597,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "enam.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 923774906254270,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "tujuh.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 141068367973082,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "delapan.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 249383860515928,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "sembilan.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 153400858809219,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "sepuluh.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 828844936276443,
+									"file-info": {
+										"purpose": "none"
+									}
+								},
+								{
+									"name": "Success_T2.webm",
+									"type": "audio/webm; codecs=opus",
+									"sid": 340532623646136,
+									"file-info": {
+										"purpose": "none"
+									}
+								}
+							],
+							"subfolders": [],
+							"name": "Tahap2"
+						}
+					],
+					"name": "Level1"
+				},
+				{
+					"items": [
+						{
+							"name": "jawaban benar.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 582715293704821,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "drop jawaban.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 406612889123411,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "klik button.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 466413590858912,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "jawaban salah-variasi-1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 530213514496148,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "menang.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 329227322251608,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "diruang kelas.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 465892525888670,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "dikamar tidur.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 888832293408123,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "puzzle salah.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 927330224047062,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Level2"
+				},
+				{
+					"items": [
+						{
+							"name": "latar kebun binatang.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 229801295253583,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Level3"
+				}
+			]
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 543068297291334,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 721248517199736,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 150660167640782,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 140481376245103,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 256035783547493,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 193316248966264,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 565355495993257,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "scale-inner",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"multitexturing": "auto",
+		"gpuPreference": "high-performance",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress-logo",
+		"preloadSounds": true,
+		"uidAllocationMode": "increment",
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"scriptsType": "module"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": "Lay_MainMenu"
+}

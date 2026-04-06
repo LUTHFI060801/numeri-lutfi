@@ -1,0 +1,30 @@
+{
+	"name": "ES_MainMenu",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 527586182403074
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 805459059325623,
+					"parameters": [
+						"\"Lay_RoadMap\""
+					]
+				}
+			],
+			"sid": 179044701396966
+		}
+	],
+	"sid": 709924218049953
+}
