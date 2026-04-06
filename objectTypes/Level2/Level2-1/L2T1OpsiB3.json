@@ -1,20 +1,15 @@
 {
-	"name": "CameraFocus",
+	"name": "L2T1OpsiB3",
 	"plugin-id": "Sprite",
-	"sid": 132259958890818,
+	"sid": 616642977886934,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 496219923259903
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 747154750713491
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 579306466671145
 		}
 	],
 	"effectTypes": [],
@@ -23,21 +18,37 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 331,
+						"height": 254,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4872432,
+						"imageSpriteId": 7500495,
+						"collisionPoly": {
+							"points": [
+								0.1027190332326284,
+								0,
+								0.14803625377643503,
+								0,
+								1,
+								0.14566929133858267,
+								0.9607250755287009,
+								0.9251968503937008,
+								0.09667673716012085,
+								0.8779527559055118,
+								0,
+								0.19291338582677164
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 932195379960010,
+				"sid": 158870937101334,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

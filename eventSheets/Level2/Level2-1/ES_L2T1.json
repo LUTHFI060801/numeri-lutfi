@@ -1,0 +1,963 @@
+{
+	"name": "ES_L2T1",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Common Config L2T1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 276649486822336
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Timer",
+							"sid": 711718422512559,
+							"parameters": [
+								"30"
+							]
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 250533741072496
+						}
+					],
+					"sid": 211875768919546
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 844698869469190,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "L2T1SoalA1",
+							"sid": 787101411386488,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "L2T1SoalA2",
+							"sid": 885745686061976,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "L2T1OpsiA3",
+							"sid": 166546346379776,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "L2T1OpsiA2",
+							"sid": 936688690014285,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "L2T1OpsiA1",
+							"sid": 214532106072167,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 848299928388857
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 663306556425398,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 507575064540317,
+							"parameters": {
+								"variable": "timer",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "LoseGame",
+							"sid": 739735460561271,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 115304972489047
+				}
+			],
+			"sid": 227716234391994
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Soal A1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 607930590162806,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiA3"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalA1",
+							"sid": 675313247077258
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 855448366133667,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban benar"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 882093110913794,
+							"parameters": {
+								"seconds": "0.8",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "L2T1SoalA1",
+							"sid": 983365615104204
+						},
+						{
+							"id": "set-position",
+							"objectClass": "L2T1SoalA2",
+							"sid": 250228268094873,
+							"parameters": {
+								"x": "655",
+								"y": "372"
+							}
+						}
+					],
+					"sid": 604463593566398
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 811168573836789,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiA2"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalA1",
+							"sid": 866414816554166
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 998826026242331,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA2",
+							"sid": 613804906458302,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 508059588018132,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA2",
+							"sid": 778153431396922,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 918980608535166
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 799674586447409,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiA1"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalA1",
+							"sid": 831806542808521
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 470628217776003,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA1",
+							"sid": 138157356458119,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 664346351766538,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA1",
+							"sid": 967788533200487,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 518412170116944
+				}
+			],
+			"sid": 601824165416097
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Soal A2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 538839274817654,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiA1"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalA2",
+							"sid": 240287056378763
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 424870610049895,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban benar"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 229374261548821,
+							"parameters": {
+								"seconds": "0.8",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "L2T1SoalA2",
+							"sid": 657547245775541
+						},
+						{
+							"id": "set-position",
+							"objectClass": "L2T1SoalB1",
+							"sid": 830202423404706,
+							"parameters": {
+								"x": "655",
+								"y": "372"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "L2T1OpsiA3",
+							"sid": 505247498511396
+						},
+						{
+							"id": "destroy",
+							"objectClass": "L2T1OpsiA2",
+							"sid": 695491649038976
+						},
+						{
+							"id": "destroy",
+							"objectClass": "L2T1OpsiA1",
+							"sid": 797647001343963
+						},
+						{
+							"id": "set-position",
+							"objectClass": "L2T1OpsiB1",
+							"sid": 726831057627714,
+							"parameters": {
+								"x": "377",
+								"y": "485"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "L2T1OpsiB2",
+							"sid": 603890637129450,
+							"parameters": {
+								"x": " 645",
+								"y": "485"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "L2T1OpsiB3",
+							"sid": 415786037799657,
+							"parameters": {
+								"x": " 907",
+								"y": "485"
+							}
+						}
+					],
+					"sid": 947630922023730
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 496020795933336,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiA2"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalA2",
+							"sid": 619456734173142
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 427038597025166,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA2",
+							"sid": 519567599087809,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 460684854956270,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA2",
+							"sid": 515141319745131,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 464048633210969
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 329260613295044,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiA3"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalA2",
+							"sid": 709926785249458
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 388888045693238,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA3",
+							"sid": 956023184384871,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 131082131915273,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiA3",
+							"sid": 484661990032240,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 820661098208145
+				}
+			],
+			"sid": 983480349973966
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Soal B1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 160366007269156,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiB3"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalB1",
+							"sid": 146611369435036
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 473907330741830,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban benar"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 580705152147517,
+							"parameters": {
+								"seconds": "0.8",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "L2T1SoalB1",
+							"sid": 798129138995150
+						},
+						{
+							"id": "set-position",
+							"objectClass": "L2T1SoalB2",
+							"sid": 158762019083404,
+							"parameters": {
+								"x": "655",
+								"y": "372"
+							}
+						}
+					],
+					"sid": 286242446430441
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 112449103908675,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiB2"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalB1",
+							"sid": 516461348455842
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 530251969962324,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB2",
+							"sid": 557355451674257,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 252495926216028,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB2",
+							"sid": 753056249633903,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 885637432072513
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 240106631623417,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiB1"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalB1",
+							"sid": 139681662182783
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 849844605650249,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB1",
+							"sid": 787328347056233,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 168874161333049,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB1",
+							"sid": 112123918108263,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 772158806389322
+				}
+			],
+			"sid": 493825576794020
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Soal B2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 564908329858952,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiB1"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalB2",
+							"sid": 325474962372031
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 259110912915952,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban benar"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 218488049502728,
+							"parameters": {
+								"seconds": "0.8",
+								"use-timescale": true
+							}
+						},
+						{
+							"callFunction": "winGame",
+							"sid": 643297193050111,
+							"parameters": [
+								"\"test\"",
+								"2"
+							]
+						}
+					],
+					"sid": 823894784214242
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 288885254949155,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiB2"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalB2",
+							"sid": 260910359758396
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 518741467664975,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB2",
+							"sid": 643227933646799,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 468344693200038,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB2",
+							"sid": 760546511655217,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 570080397801794
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 740792182951663,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "L2T1OpsiB3"
+							}
+						},
+						{
+							"id": "is-on-screen",
+							"objectClass": "L2T1SoalB2",
+							"sid": 291176212494065
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 530745274332792,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB3",
+							"sid": 587021170067439,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 144020706906663,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "L2T1OpsiB3",
+							"sid": 172519086522618,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 800559818390965
+				}
+			],
+			"sid": 363565451351445
+		}
+	],
+	"sid": 588177404446889
+}

@@ -127,6 +127,31 @@
 				}
 			],
 			"sid": 277554192865087
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 854651009155948,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BTN_1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "GoToLayoutFunction",
+					"sid": 316673301161809,
+					"parameters": [
+						"\"Lay-L2T1-Intro1\""
+					]
+				}
+			],
+			"sid": 867129266777100
 		}
 	],
 	"sid": 901847413270461

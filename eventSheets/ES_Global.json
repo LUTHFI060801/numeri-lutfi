@@ -3,6 +3,16 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "RoadmapLevel",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 299384532299290
+		},
+		{
+			"eventType": "variable",
 			"name": "NextLayoutName",
 			"type": "string",
 			"initialValue": "",
@@ -26,7 +36,7 @@
 			"name": "timer",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "Timer countdown dalam detik (2 menit)",
+			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 289090886991241
@@ -36,7 +46,7 @@
 			"name": "score",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "Jumlah item yang berhasil dikelompokkan",
+			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 115256987724284
@@ -65,9 +75,9 @@
 					"actions": [
 						{
 							"callFunction": "GoToLayoutFunction",
-							"sid": 795911773430030,
+							"sid": 727887957604884,
 							"parameters": [
-								"\"Lay_RoadMap_Level2\""
+								"\"Lay_RoadMap_Level\" & RoadmapLevel"
 							]
 						}
 					],
@@ -169,25 +179,93 @@
 							"type": "number",
 							"initialValue": "0",
 							"comment": "",
-							"sid": 910379508094487
+							"sid": 926224509211670
 						}
 					],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [
 						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 870903291681943,
+							"parameters": {
+								"object-to-create": "BannerTimer",
+								"layer": "\"OverlayInGame\"",
+								"x": "111",
+								"y": "53",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BannerTimer",
+							"sid": 658909851443138,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "BannerTimer",
+							"sid": 501870607235460,
+							"parameters": {
+								"width": "201.177319",
+								"height": "98.654262"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 215363748717800,
+							"sid": 597104864424874,
 							"parameters": {
 								"variable": "timer",
 								"value": "0"
 							}
 						},
 						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 102135042362038,
+							"parameters": {
+								"object-to-create": "Timer",
+								"layer": "\"OverlayInGame\"",
+								"x": "110",
+								"y": "46",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Timer",
+							"sid": 131428214077466,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Timer",
+							"sid": 591155917629489,
+							"parameters": {
+								"width": "65",
+								"height": "30"
+							}
+						},
+						{
+							"id": "set-font-size",
+							"objectClass": "Timer",
+							"sid": 836564373643658,
+							"parameters": {
+								"size-pt": "18"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 942936502060520,
+							"sid": 498142487162373,
 							"parameters": {
 								"variable": "timer",
 								"value": "duration"
@@ -196,14 +274,14 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 200314076585333,
+							"sid": 902233549632568,
 							"parameters": {
 								"variable": "IsGameOver",
-								"value": "true"
+								"value": "false"
 							}
 						}
 					],
-					"sid": 942869862992379
+					"sid": 446471540109502
 				},
 				{
 					"eventType": "block",
@@ -211,7 +289,7 @@
 						{
 							"id": "compare-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 364357754646939,
+							"sid": 757124781349375,
 							"parameters": {
 								"variable": "IsGameOver"
 							},
@@ -220,14 +298,14 @@
 						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 464076509598412
+							"sid": 145352078924257
 						}
 					],
 					"actions": [
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 401523206455248,
+							"sid": 465397410838235,
 							"parameters": {
 								"variable": "timer",
 								"value": "dt"
@@ -235,14 +313,127 @@
 						},
 						{
 							"id": "set-text",
-							"objectClass": "TImer",
-							"sid": 968079347081179,
+							"objectClass": "Timer",
+							"sid": 438378207261111,
 							"parameters": {
 								"text": "zeropad(floor(Timer / 60), 2) & \":\" & zeropad(floor(Timer % 60), 2)"
 							}
 						}
 					],
-					"sid": 257103523715138
+					"sid": 392835308079787
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 949619333738577,
+							"parameters": {
+								"variable": "timer",
+								"comparison": 2,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-font-color",
+							"objectClass": "Timer",
+							"sid": 114065223767329,
+							"parameters": {
+								"color": "rgb(255, 0, 0)"
+							}
+						}
+					],
+					"sid": 381890965102240
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 997897145288484,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "BannerTimer",
+							"sid": 927274033335381,
+							"isInverted": true
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Timer",
+							"sid": 497598104058209,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BannerTimer",
+							"sid": 363778589079440,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Timer",
+							"sid": 415030382855066,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 418791422144709
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 726545213092710,
+							"parameters": {
+								"variable": "IsGameOver"
+							}
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "BannerTimer",
+							"sid": 581438041323267
+						},
+						{
+							"id": "is-visible",
+							"objectClass": "Timer",
+							"sid": 921478707001279
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BannerTimer",
+							"sid": 289828607760934,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Timer",
+							"sid": 449228908716080,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 402235575780946
 				}
 			],
 			"sid": 974570760356432
@@ -500,6 +691,45 @@
 							}
 						},
 						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 679566468042104,
+							"parameters": {
+								"object-to-create": "TransparantOverlay",
+								"layer": "\"OverlayInGame\"",
+								"x": "640.623318",
+								"y": "360.660269",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "TransparantOverlay",
+							"sid": 707420370412621,
+							"parameters": {
+								"opacity": "40"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "TransparantOverlay",
+							"sid": 371759469386301,
+							"parameters": {
+								"width": "1280",
+								"height": "720"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TransparantOverlay",
+							"sid": 439774892403495,
+							"parameters": {
+								"x": "640.623318",
+								"y": "360.660269"
+							}
+						},
+						{
 							"id": "set-visible",
 							"objectClass": "TransparantOverlay",
 							"sid": 972178458866910,
@@ -528,6 +758,28 @@
 								"volume": "4",
 								"stereo-pan": "0",
 								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 926423980269103,
+							"parameters": {
+								"object-to-create": "Ready",
+								"layer": "\"OverlayInGame\"",
+								"x": "640.623318",
+								"y": "360.660269",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Ready",
+							"sid": 612254489828519,
+							"parameters": {
+								"width": "0",
+								"height": "0"
 							}
 						},
 						{
@@ -560,7 +812,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Ready",
-							"sid": 222674214879845,
+							"sid": 718693358854588,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -569,7 +821,7 @@
 								"end-y": "0",
 								"time": "0.5",
 								"ease": "easeinback",
-								"destroy-on-complete": "no",
+								"destroy-on-complete": "yes",
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
@@ -582,24 +834,6 @@
 							"parameters": {
 								"seconds": "0.5",
 								"use-timescale": true
-							}
-						},
-						{
-							"id": "tween-two-properties",
-							"objectClass": "Go",
-							"sid": 420516237966022,
-							"behaviorType": "Tween",
-							"parameters": {
-								"tags": "\"\"",
-								"property": "size",
-								"end-x": "843",
-								"end-y": "733",
-								"time": "0.5",
-								"ease": "easeoutback",
-								"destroy-on-complete": "no",
-								"loop": "no",
-								"ping-pong": "no",
-								"repeat-count": "1"
 							}
 						},
 						{
@@ -617,6 +851,46 @@
 							}
 						},
 						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 308398728795377,
+							"parameters": {
+								"object-to-create": "Go",
+								"layer": "\"OverlayInGame\"",
+								"x": "640.623318",
+								"y": "360.660269",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Go",
+							"sid": 961452608209553,
+							"parameters": {
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "tween-two-properties",
+							"objectClass": "Go",
+							"sid": 905312300567148,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "size",
+								"end-x": "843",
+								"end-y": "733",
+								"time": "0.5",
+								"ease": "easeoutback",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						},
+						{
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 353129705609443,
@@ -628,7 +902,7 @@
 						{
 							"id": "tween-two-properties",
 							"objectClass": "Go",
-							"sid": 731911280924810,
+							"sid": 784503287889218,
 							"behaviorType": "Tween",
 							"parameters": {
 								"tags": "\"\"",
@@ -637,7 +911,7 @@
 								"end-y": "0",
 								"time": "0.5",
 								"ease": "easeinback",
-								"destroy-on-complete": "no",
+								"destroy-on-complete": "yes",
 								"loop": "no",
 								"ping-pong": "no",
 								"repeat-count": "1"
@@ -687,6 +961,13 @@
 							"initialValue": "",
 							"comment": "",
 							"sid": 791774026614313
+						},
+						{
+							"name": "Level",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 791885356938125
 						}
 					],
 					"eventType": "function-block",
@@ -702,6 +983,15 @@
 							}
 						},
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 660041698177412,
+							"parameters": {
+								"variable": "RoadmapLevel",
+								"value": "Level"
+							}
+						},
+						{
 							"id": "stop-all",
 							"objectClass": "Audio",
 							"sid": 721025892602630
@@ -712,6 +1002,72 @@
 							"sid": 910134037558894,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 954550242235062,
+							"parameters": {
+								"object-to-create": "WinNotif",
+								"layer": "\"OverlayInGame\"",
+								"x": "650.623318",
+								"y": "320.660269",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "WinNotif",
+							"sid": 673190078145653,
+							"parameters": {
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 249600126808740,
+							"parameters": {
+								"object-to-create": "next",
+								"layer": "\"OverlayInGame\"",
+								"x": "725.158412",
+								"y": "510.077607",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "next",
+							"sid": 836625905103516,
+							"parameters": {
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 201064720986344,
+							"parameters": {
+								"object-to-create": "home",
+								"layer": "\"OverlayInGame\"",
+								"x": "577.177709",
+								"y": "510.077607",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "home",
+							"sid": 667155204742810,
+							"parameters": {
+								"width": "0",
+								"height": "0"
 							}
 						},
 						{
@@ -811,7 +1167,15 @@
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [],
+					"functionParameters": [
+						{
+							"name": "Level",
+							"type": "number",
+							"initialValue": "1",
+							"comment": "",
+							"sid": 656343652246370
+						}
+					],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [
@@ -819,6 +1183,15 @@
 							"id": "stop-all",
 							"objectClass": "Audio",
 							"sid": 490609945636570
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 154287851683358,
+							"parameters": {
+								"variable": "RoadmapLevel",
+								"value": "Level"
+							}
 						},
 						{
 							"id": "set-boolean-eventvar",
@@ -835,6 +1208,72 @@
 							"sid": 565105082909336,
 							"parameters": {
 								"visibility": "visible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 973003653440405,
+							"parameters": {
+								"object-to-create": "LoseNotif",
+								"layer": "\"OverlayInGame\"",
+								"x": "650.623318",
+								"y": "300.660269",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "LoseNotif",
+							"sid": 362451668967724,
+							"parameters": {
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 206936368499849,
+							"parameters": {
+								"object-to-create": "Retry",
+								"layer": "\"OverlayInGame\"",
+								"x": "725.158412",
+								"y": "560.077607",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "Retry",
+							"sid": 987524417927097,
+							"parameters": {
+								"width": "0",
+								"height": "0"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 619214127422193,
+							"parameters": {
+								"object-to-create": "home",
+								"layer": "\"OverlayInGame\"",
+								"x": "577.177709",
+								"y": "560.077607",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "home",
+							"sid": 415385719113277,
+							"parameters": {
+								"width": "0",
+								"height": "0"
 							}
 						},
 						{

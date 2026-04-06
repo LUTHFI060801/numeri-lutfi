@@ -1,0 +1,66 @@
+{
+	"name": "L2T1OpsiA1",
+	"plugin-id": "Sprite",
+	"sid": 709016929166088,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 409819143416966
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 372,
+						"height": 93,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5093949,
+						"collisionPoly": {
+							"points": [
+								0.10215053763440861,
+								0,
+								0.1478494623655914,
+								0,
+								0.9811827956989247,
+								0.3010752688172043,
+								0.9919354838709677,
+								0.34408602150537637,
+								0.9973118279569892,
+								0.8817204301075269,
+								0.9919354838709677,
+								0.9247311827956989,
+								0.967741935483871,
+								1,
+								0.05913978494623656,
+								0.9354838709677419
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 143734016196848,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

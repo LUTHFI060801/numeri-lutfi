@@ -1,0 +1,27 @@
+{
+	"name": "ES_L2T1-Intro2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 991596542465832
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 251459594969547,
+					"parameters": {
+						"layout": "Lay_L2T1-Intro3"
+					}
+				}
+			],
+			"sid": 336724681359324
+		}
+	],
+	"sid": 952076422768773
+}

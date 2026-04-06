@@ -1,43 +1,32 @@
 {
-	"name": "CameraFocus",
+	"name": "L2T1Intro2",
 	"plugin-id": "Sprite",
-	"sid": 132259958890818,
+	"sid": 326088505224179,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 496219923259903
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 747154750713491
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 1512,
+						"height": 982,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 4872432,
+						"imageSpriteId": 9376219,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 932195379960010,
+				"sid": 194842070886858,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
