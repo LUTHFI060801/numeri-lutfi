@@ -1,0 +1,73 @@
+{
+	"name": "ling_bola_level2_t1",
+	"plugin-id": "Sprite",
+	"sid": 157053656191938,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "bentuk",
+			"type": "string",
+			"desc": "Tipe bentuk geometri item ini",
+			"show": true,
+			"sid": 160139999820093
+		},
+		{
+			"name": "X_origin",
+			"type": "number",
+			"desc": "Save X position saat game start",
+			"show": true,
+			"sid": 574326409856399
+		},
+		{
+			"name": "Y_origin",
+			"type": "number",
+			"desc": "Save Y position saat game start",
+			"show": true,
+			"sid": 186041056065754
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 279853278276344
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 517022931171867
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 184,
+						"height": 184,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9652943,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 956766438080897,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

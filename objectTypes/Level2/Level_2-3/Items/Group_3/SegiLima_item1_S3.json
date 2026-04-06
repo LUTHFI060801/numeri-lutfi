@@ -1,0 +1,80 @@
+{
+	"name": "SegiLima_item1_S3",
+	"plugin-id": "Sprite",
+	"sid": 838838861150600,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 331770272673930
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 183,
+						"height": 183,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2235564,
+						"collisionPoly": {
+							"points": [
+								0.4098360655737705,
+								0.15300546448087432,
+								0.5519125683060109,
+								0.15846994535519127,
+								0.6010928961748634,
+								0.17486338797814208,
+								0.6557377049180327,
+								0.20218579234972678,
+								0.726775956284153,
+								0.26229508196721313,
+								0.8743169398907104,
+								0.47540983606557374,
+								0.726775956284153,
+								0.9016393442622951,
+								0.26229508196721313,
+								0.8961748633879781,
+								0.13114754098360656,
+								0.6010928961748634,
+								0.12021857923497267,
+								0.546448087431694,
+								0.12021857923497267,
+								0.44808743169398907,
+								0.19672131147540983,
+								0.273224043715847,
+								0.24043715846994534,
+								0.22950819672131148,
+								0.2786885245901639,
+								0.20218579234972678,
+								0.3333333333333333,
+								0.17486338797814208
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 634485714676978,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"name": "segitiga_penggariskuning_level2_t1",
+	"plugin-id": "Sprite",
+	"sid": 905212164681495,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "bentuk",
+			"type": "string",
+			"desc": "Tipe bentuk geometri item ini",
+			"show": true,
+			"sid": 411278026644310
+		},
+		{
+			"name": "X_origin",
+			"type": "number",
+			"desc": "Posisi X awal item untuk return saat drop salah",
+			"show": true,
+			"sid": 138604040647498
+		},
+		{
+			"name": "Y_origin",
+			"type": "number",
+			"desc": "Posisi Y awal item untuk return saat drop salah",
+			"show": true,
+			"sid": 205157350262418
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 411230004218412
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 298354599097959
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 184,
+						"height": 184,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5067286,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 879597630880921,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

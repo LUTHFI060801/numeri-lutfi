@@ -254,6 +254,110 @@
 							}
 						],
 						"name": "Level2-2"
+					},
+					{
+						"items": [
+							"bg_level2_t1",
+							"full_level2_t1",
+							"judul_level2_t1",
+							"L2T3_Intro"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"gagal_level2_t1",
+									"info_level2_t1",
+									"berhasil_level2_t1"
+								],
+								"subfolders": [],
+								"name": "Notifications"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"kotak_lingkaran_t1",
+											"kotak_persegi_t1",
+											"kotak_segitiga_t1"
+										],
+										"subfolders": [],
+										"name": "Group_1"
+									},
+									{
+										"items": [
+											"belah_ketupat_t1",
+											"persegi_panjang_t1",
+											"trapesium_t1"
+										],
+										"subfolders": [],
+										"name": "Group_2"
+									},
+									{
+										"items": [
+											"jajar_t1",
+											"layang_t1",
+											"segilima_t1"
+										],
+										"subfolders": [],
+										"name": "Group_3"
+									}
+								],
+								"name": "Hamper"
+							},
+							{
+								"items": [],
+								"subfolders": [
+									{
+										"items": [
+											"ling_bola_level2_t1",
+											"ling_cermin_level2_t1",
+											"ling_jam_level2_t1",
+											"persegi_buku_level2_t1",
+											"persegi_jendela_level2_t1",
+											"persegi_whiteboard_level2_t1",
+											"segitiga_level2_t1",
+											"segitiga_penggariskuning_level2_t1",
+											"segitiga_penggarispink_level2_t1"
+										],
+										"subfolders": [],
+										"name": "Group_1"
+									},
+									{
+										"items": [
+											"PerPan_item1_S2",
+											"PerPan_item2_S2",
+											"Trapesium_item1_S2",
+											"Trapesium_item2_S2",
+											"Trapesium_item3_S2",
+											"Ketupat_item1_S2",
+											"Ketupat_item2_S2",
+											"Ketupat_item3_S2",
+											"PerPan_item3_S2"
+										],
+										"subfolders": [],
+										"name": "Group_2"
+									},
+									{
+										"items": [
+											"Layang_item1_S3",
+											"Layang_item2_S3",
+											"Layang_item3_S3",
+											"JarGen_item1_S3",
+											"JarGen_item2_S3",
+											"JarGen_item3_S3",
+											"SegiLima_item1_S3",
+											"SegiLima_item2_S3",
+											"SegiLima_item3_S3"
+										],
+										"subfolders": [],
+										"name": "Group_3"
+									}
+								],
+								"name": "Items"
+							}
+						],
+						"name": "Level_2-3"
 					}
 				],
 				"name": "Level2"
@@ -321,6 +425,16 @@
 						],
 						"subfolders": [],
 						"name": "Level2-2"
+					},
+					{
+						"items": [
+							"Lay_L2T3-Intro",
+							"Lay_L2T3-Stage1",
+							"Lay_L2T3-Stage2",
+							"Lay_L2T3-Stage3"
+						],
+						"subfolders": [],
+						"name": "Level2-3"
 					}
 				],
 				"name": "Level2"
@@ -364,6 +478,16 @@
 						],
 						"subfolders": [],
 						"name": "Level2-2"
+					},
+					{
+						"items": [
+							"ES_L2T3-Stage1",
+							"ES_L2T3-Intro",
+							"ES_L2T3-Stage2",
+							"ES_L2T3-Stage3"
+						],
+						"subfolders": [],
+						"name": "Level2-3"
 					}
 				],
 				"name": "Level2"

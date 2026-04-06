@@ -1,0 +1,80 @@
+{
+	"name": "Layang_item3_S3",
+	"plugin-id": "Sprite",
+	"sid": 511603654986106,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 543925390842378
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 367,
+						"height": 367,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1405698,
+						"collisionPoly": {
+							"points": [
+								0.44959128065395093,
+								0.20435967302452315,
+								0.55858310626703,
+								0.21525885558583105,
+								0.659400544959128,
+								0.26975476839237056,
+								0.6975476839237057,
+								0.3079019073569482,
+								0.7629427792915532,
+								0.4659400544959128,
+								0.7629427792915532,
+								0.5149863760217984,
+								0.7275204359673024,
+								0.6348773841961853,
+								0.7002724795640327,
+								0.6757493188010899,
+								0.6539509536784741,
+								0.7220708446866485,
+								0.4087193460490463,
+								0.8801089918256131,
+								0.18528610354223432,
+								0.5149863760217984,
+								0.18528610354223432,
+								0.4659400544959128,
+								0.2098092643051771,
+								0.37329700272479566,
+								0.26430517711171664,
+								0.29155313351498635,
+								0.32697547683923706,
+								0.24250681198910082
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 506853974889155,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

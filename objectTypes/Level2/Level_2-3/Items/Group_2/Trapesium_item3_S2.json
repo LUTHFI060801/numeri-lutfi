@@ -1,0 +1,70 @@
+{
+	"name": "Trapesium_item3_S2",
+	"plugin-id": "Sprite",
+	"sid": 818179051328906,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 672282898537583
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 190,
+						"height": 190,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2016629,
+						"collisionPoly": {
+							"points": [
+								0.47368421052631576,
+								0.22631578947368422,
+								0.5263157894736842,
+								0.23157894736842105,
+								0.5894736842105263,
+								0.25263157894736843,
+								0.7263157894736842,
+								0.35789473684210527,
+								0.8789473684210526,
+								0.7526315789473684,
+								0.4368421052631579,
+								0.7578947368421053,
+								0.3894736842105263,
+								0.7473684210526316,
+								0.05789473684210526,
+								0.5631578947368421,
+								0.3157894736842105,
+								0.2736842105263158,
+								0.4,
+								0.23684210526315788
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 433426573632996,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

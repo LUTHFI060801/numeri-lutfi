@@ -1,0 +1,1274 @@
+{
+	"name": "ES_L2T3-Stage2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Rules2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 490174930825794
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 152885934948325,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 818915814957321
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Audio",
+							"sid": 489842447232774,
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 942090641742717
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 909110507927988,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/diruang kelas"
+								},
+								"loop": "looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 281907860978864
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 769321314586510,
+							"parameters": {
+								"variable": "score",
+								"comparison": 0,
+								"value": "9"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 645073099865815,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 515146743184951
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 564672765855128,
+							"parameters": {
+								"layout": "Lay_L2T3-Stage3"
+							}
+						}
+					],
+					"sid": 833836560672251
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 952412117944187,
+							"parameters": {
+								"variable": "timer",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 914932289642285
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 241700045133525,
+							"parameters": {
+								"variable": "IsGameOver",
+								"value": "true"
+							}
+						},
+						{
+							"callFunction": "LoseGame",
+							"sid": 714016846650617,
+							"parameters": [
+								"2",
+								"\"Lay_L2T3-Stage1\""
+							]
+						}
+					],
+					"sid": 981117896018880
+				}
+			],
+			"sid": 895188215821862
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Drag & Drop - Persegi Panjang",
+			"description": "Event drag drop untuk 3 items persegi",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "PerPan_item1_S2",
+							"sid": 301673443868221,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerPan_item1_S2",
+							"sid": 876331808595045,
+							"parameters": {
+								"object": "persegi_panjang_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 464115575914080,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PerPan_item1_S2",
+							"sid": 112637126689591
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 210616551182696,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 426873325486690
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "PerPan_item2_S2",
+							"sid": 844314608720142,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerPan_item2_S2",
+							"sid": 826425726268880,
+							"parameters": {
+								"object": "persegi_panjang_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 947847448577816,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PerPan_item2_S2",
+							"sid": 475978146071589
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 254419165964101,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 286672892105567
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "PerPan_item3_S2",
+							"sid": 628554856277535,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerPan_item3_S2",
+							"sid": 689018800289289,
+							"parameters": {
+								"object": "persegi_panjang_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 927406498376772,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PerPan_item3_S2",
+							"sid": 356966926586493
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 832117085830245,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 355398825898793
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "PerPan_item3_S2",
+							"sid": 584932129691374,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerPan_item3_S2",
+							"sid": 523664089907660,
+							"parameters": {
+								"object": "persegi_panjang_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 909360891883788,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PerPan_item3_S2",
+							"sid": 870991107831740,
+							"parameters": {
+								"x": "859",
+								"y": "464"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 780248489388579,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 125427052215112,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 498491454746329,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 377661243103329
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "PerPan_item2_S2",
+							"sid": 697881505840738,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerPan_item2_S2",
+							"sid": 828560267736331,
+							"parameters": {
+								"object": "persegi_panjang_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 692422048116136,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PerPan_item2_S2",
+							"sid": 970668956713765,
+							"parameters": {
+								"x": "759",
+								"y": "318"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 530878217481141,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 440277712036700,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 662379202264252,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 149241349807492
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "PerPan_item1_S2",
+							"sid": 511383001039552,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PerPan_item1_S2",
+							"sid": 415048201598103,
+							"parameters": {
+								"object": "persegi_panjang_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 456258593792806,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PerPan_item1_S2",
+							"sid": 480348795596316,
+							"parameters": {
+								"x": "162",
+								"y": "389"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 925288963962434,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 948876975017332,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 164437957524348,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 559203096630424
+				}
+			],
+			"sid": 444061779921969
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Drag & Drop - ketupat",
+			"description": "Event drag drop untuk 3 items segitiga",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Ketupat_item1_S2",
+							"sid": 705004871595343,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ketupat_item1_S2",
+							"sid": 158203219302416,
+							"parameters": {
+								"object": "belah_ketupat_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 926441490781550,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 857454375012021,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Ketupat_item1_S2",
+							"sid": 552849266592098
+						}
+					],
+					"sid": 719865706747611
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Ketupat_item2_S2",
+							"sid": 356931075357307,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ketupat_item2_S2",
+							"sid": 280724031962871,
+							"parameters": {
+								"object": "belah_ketupat_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 640625433567660,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 713384565180979,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Ketupat_item2_S2",
+							"sid": 267579831253210
+						}
+					],
+					"sid": 717595708038809
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Ketupat_item3_S2",
+							"sid": 180607753865008,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ketupat_item3_S2",
+							"sid": 837819813188111,
+							"parameters": {
+								"object": "belah_ketupat_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 133979178099628,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 413403560991650,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Ketupat_item3_S2",
+							"sid": 342309839690976
+						}
+					],
+					"sid": 296401875706226
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Ketupat_item3_S2",
+							"sid": 178618187156362,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ketupat_item3_S2",
+							"sid": 671356253223220,
+							"parameters": {
+								"object": "belah_ketupat_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 110287401249104,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Ketupat_item3_S2",
+							"sid": 599269410804701,
+							"parameters": {
+								"x": "180",
+								"y": "255"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 755585322694879,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 875837913860127,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 102025187942530,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 828568466900835
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Ketupat_item2_S2",
+							"sid": 212306615812043,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ketupat_item2_S2",
+							"sid": 640919653178368,
+							"parameters": {
+								"object": "belah_ketupat_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 368255665638754,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Ketupat_item2_S2",
+							"sid": 772208821978116,
+							"parameters": {
+								"x": "432",
+								"y": "474"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 731135402824974,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 557850536657338,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 444837283203076,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 764016323194996
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Ketupat_item1_S2",
+							"sid": 698054697577165,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Ketupat_item1_S2",
+							"sid": 337278462985361,
+							"parameters": {
+								"object": "belah_ketupat_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 180011642112567,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Ketupat_item1_S2",
+							"sid": 817317792974465,
+							"parameters": {
+								"x": "992",
+								"y": "183"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 184356510090073,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 269262348462059,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 253724971951217,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 728659087489767
+				}
+			],
+			"sid": 862635972661177
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Drag & Drop - Trapesium",
+			"description": "Event drag drop untuk 3 items lingkaran",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Trapesium_item1_S2",
+							"sid": 957003343817941,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trapesium_item1_S2",
+							"sid": 602849728247499,
+							"parameters": {
+								"object": "trapesium_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 274820502150509,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 758856396362989,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Trapesium_item1_S2",
+							"sid": 859845198188030
+						}
+					],
+					"sid": 863968424845823
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Trapesium_item2_S2",
+							"sid": 662780836467764,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trapesium_item2_S2",
+							"sid": 971964224622816,
+							"parameters": {
+								"object": "trapesium_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 148584609569218,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 287711069083375,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Trapesium_item2_S2",
+							"sid": 327889531402415
+						}
+					],
+					"sid": 810984114740587
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Trapesium_item3_S2",
+							"sid": 378909066937684,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trapesium_item3_S2",
+							"sid": 691711667327428,
+							"parameters": {
+								"object": "trapesium_t1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 578910202046442,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/drop jawaban"
+								},
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 848794904395790,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Trapesium_item3_S2",
+							"sid": 654336827419870
+						}
+					],
+					"sid": 586682002575511
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Trapesium_item3_S2",
+							"sid": 956612146345877,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trapesium_item3_S2",
+							"sid": 440105347602719,
+							"parameters": {
+								"object": "trapesium_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 479648737626692,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Trapesium_item3_S2",
+							"sid": 391229765722674,
+							"parameters": {
+								"x": "643",
+								"y": "195"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 743375883909311,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 680229031290087,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 594259391650142,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 360942048283157
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Trapesium_item2_S2",
+							"sid": 882638710290090,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trapesium_item2_S2",
+							"sid": 711351215270008,
+							"parameters": {
+								"object": "trapesium_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 351581271886894,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Trapesium_item2_S2",
+							"sid": 193592903717156,
+							"parameters": {
+								"x": "644",
+								"y": "468"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 229362760050720,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 330901170759368,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 417548342187456,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 322031642856544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Trapesium_item1_S2",
+							"sid": 227808944054254,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Trapesium_item1_S2",
+							"sid": 834409984324008,
+							"parameters": {
+								"object": "trapesium_t1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 991045290121797,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/puzzle salah"
+								},
+								"loop": "not-looping",
+								"volume": "3",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Trapesium_item1_S2",
+							"sid": 691117308688724,
+							"parameters": {
+								"x": "1090",
+								"y": "398"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 901582577833111,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 959738331072856,
+							"parameters": {
+								"seconds": "0.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "gagal_level2_t1",
+							"sid": 782298021814645,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 683246591052774
+				}
+			],
+			"sid": 711867313724210
+		}
+	],
+	"sid": 784694715280545
+}
