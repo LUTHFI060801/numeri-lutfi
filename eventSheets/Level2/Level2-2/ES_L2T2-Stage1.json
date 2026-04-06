@@ -1,0 +1,602 @@
+{
+	"name": "ES_L2T2-Stage1",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ES_Global"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Common Config L2T2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 610904453228627
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Timer",
+							"sid": 591246340969314,
+							"parameters": [
+								"120"
+							]
+						},
+						{
+							"callFunction": "startGame",
+							"sid": 529060842596297
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 311988872064379,
+							"parameters": {
+								"variable": "score",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 160514896491076
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-any-playing",
+							"objectClass": "Audio",
+							"sid": 191059346665262,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 967496962231238,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/diruang kelas"
+								},
+								"loop": "looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 829135411878625
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 795605981711067,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PuzzleTray_L2T2",
+							"sid": 377549583321779,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Banner_L2T2_Stage1",
+							"sid": 530453807874241,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PieceTray_L2T2",
+							"sid": 915658065790625,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 361959969835941,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 621864096744518,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 131569022441967,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Puzzle1_L2T2_Stage1",
+							"sid": 834603066312605,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Puzzle2_L2T2_Stage1",
+							"sid": 296139398728265,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Puzzle3_L2T2_Stage1",
+							"sid": 852968946248121,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 829125412949548
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 414600695770349,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 199528406784679,
+							"parameters": {
+								"variable": "timer",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "LoseGame",
+							"sid": 684300452120923,
+							"parameters": [
+								"2",
+								"\"Lay_L2T2-Stage1\""
+							]
+						}
+					],
+					"sid": 347100255021238
+				}
+			],
+			"sid": 433819813932292
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Stage1 Mechanic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 444935912880151,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 985067703081083,
+							"parameters": {
+								"object": "Puzzle1_L2T2_Stage1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 663491001376204,
+							"parameters": {
+								"x": "241.564792",
+								"y": "459.068691"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 898529624351345,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 980376552707627,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 123701422430894
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 153129375965498,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 919089432022990,
+							"parameters": {
+								"object": "Puzzle1_L2T2_Stage1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 350490524540371,
+							"parameters": {
+								"x": "884",
+								"y": "405"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 708096660798090,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 907988473579712,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Piece1_L2T2_Stage1",
+							"sid": 654838560303522,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 316261769309304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 546158006740681,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 625576596783775,
+							"parameters": {
+								"object": "Puzzle2_L2T2_Stage1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 542866398629409,
+							"parameters": {
+								"x": "367.900796",
+								"y": "459.363196"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 621394066899731,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 685848944609517,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 418701257216527
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 524206588453429,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 298586420997902,
+							"parameters": {
+								"object": "Puzzle2_L2T2_Stage1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 876576199168773,
+							"parameters": {
+								"x": "1044",
+								"y": "349"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 458207398735600,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 650946302370347,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Piece2_L2T2_Stage1",
+							"sid": 908356767014002,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 569794386876785
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 368876862729424,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 326173641365672,
+							"parameters": {
+								"object": "Puzzle3_L2T2_Stage1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 674329894509232,
+							"parameters": {
+								"x": "492.507611",
+								"y": "459.824704"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 873750771019843,
+							"parameters": {
+								"variable": "score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 870582801841467,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 135383002242361
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 257181931634132,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 100294070306718,
+							"parameters": {
+								"object": "Puzzle3_L2T2_Stage1"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 641745525055779,
+							"parameters": {
+								"x": "1059",
+								"y": "561"
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 859571329211790,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "active"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 500140024523466,
+							"parameters": {
+								"seconds": "0.3",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "set-active",
+							"objectClass": "Piece3_L2T2_Stage1",
+							"sid": 513126120189205,
+							"behaviorType": "Sine",
+							"parameters": {
+								"state": "inactive"
+							}
+						}
+					],
+					"sid": 716838927411264
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 472739316323289,
+							"parameters": {
+								"variable": "IsGameOver"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 591648482710541,
+							"parameters": {
+								"variable": "score",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 540117634007202
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 990441803694237,
+							"parameters": {
+								"audio-file": {
+									"path": "Level2/jawaban benar"
+								},
+								"loop": "not-looping",
+								"volume": "2",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 840963196704153,
+							"parameters": {
+								"seconds": "0.6",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 694148870266123,
+							"parameters": {
+								"layout": "Lay_L2T2-Stage2"
+							}
+						}
+					],
+					"sid": 663848533313640
+				}
+			],
+			"sid": 919476508212528
+		}
+	],
+	"sid": 368439927961155
+}

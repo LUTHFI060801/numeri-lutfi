@@ -1,0 +1,52 @@
+{
+	"name": "Banner_L2T2_Stage1",
+	"plugin-id": "Sprite",
+	"sid": 629114471380950,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1042,
+						"height": 161,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5593310,
+						"collisionPoly": {
+							"points": [
+								0.0345489443378119,
+								0,
+								0.9798464491362764,
+								0.037267080745341616,
+								0.9654510556621881,
+								0.9254658385093167,
+								0.02015355086372361,
+								0.8881987577639752
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 625815060194039,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

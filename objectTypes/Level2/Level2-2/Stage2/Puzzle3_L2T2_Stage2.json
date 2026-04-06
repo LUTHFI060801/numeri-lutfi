@@ -1,0 +1,50 @@
+{
+	"name": "Puzzle3_L2T2_Stage2",
+	"plugin-id": "Sprite",
+	"sid": 194533751618245,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 195,
+						"height": 378,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7071919,
+						"collisionPoly": {
+							"points": [
+								0.6205128205128203,
+								0.3835978835978837,
+								0.7743589743589747,
+								0.38359788359788366,
+								0.7128205128205127,
+								0.43915343915343846
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 694352702712783,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

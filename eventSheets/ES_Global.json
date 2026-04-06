@@ -3,6 +3,16 @@
 	"events": [
 		{
 			"eventType": "variable",
+			"name": "RetryToLevel",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 843226074229492
+		},
+		{
+			"eventType": "variable",
 			"name": "RoadmapLevel",
 			"type": "number",
 			"initialValue": "1",
@@ -82,6 +92,43 @@
 						}
 					],
 					"sid": 163869891329634
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 647646541029471,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Retry"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 335332676763896,
+							"parameters": {
+								"variable": "NextLayoutName",
+								"comparison": 0,
+								"value": "\"\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 833692581173104,
+							"parameters": {
+								"layout": "RetryToLevel"
+							}
+						}
+					],
+					"sid": 278357419829614
 				},
 				{
 					"eventType": "block",
@@ -1174,6 +1221,13 @@
 							"initialValue": "1",
 							"comment": "",
 							"sid": 656343652246370
+						},
+						{
+							"name": "retryTo",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 182564041301241
 						}
 					],
 					"eventType": "function-block",
@@ -1187,10 +1241,37 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 154287851683358,
+							"sid": 386072323755602,
+							"parameters": {
+								"variable": "RoadmapLevel",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 505195195659618,
+							"parameters": {
+								"variable": "RetryToLevel",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 853684920482293,
 							"parameters": {
 								"variable": "RoadmapLevel",
 								"value": "Level"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 458304765465263,
+							"parameters": {
+								"variable": "RetryToLevel",
+								"value": "retryTo"
 							}
 						},
 						{

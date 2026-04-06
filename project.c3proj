@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 47602,
+	"savedWithRelease": 47603,
 	"name": "NUMERI",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -45,6 +45,13 @@
 			"type": "behavior",
 			"id": "Anchor",
 			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -169,6 +176,84 @@
 						],
 						"subfolders": [],
 						"name": "Level2-1"
+					},
+					{
+						"items": [
+							"L2T2Intro",
+							"Bg_L2T2",
+							"PuzzleTray_L2T2",
+							"PieceTray_L2T2"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"Banner_L2T2_Stage1",
+									"Puzzle1_L2T2_Stage1",
+									"Puzzle2_L2T2_Stage1",
+									"Puzzle3_L2T2_Stage1",
+									"Piece1_L2T2_Stage1",
+									"Piece2_L2T2_Stage1",
+									"Piece3_L2T2_Stage1"
+								],
+								"subfolders": [],
+								"name": "Stage1"
+							},
+							{
+								"items": [
+									"Banner_L2T2_Stage2",
+									"Piece1_L2T2_Stage2",
+									"Piece2_L2T2_Stage2",
+									"Piece3_L2T2_Stage2",
+									"Puzzle1_L2T2_Stage2",
+									"Puzzle2_L2T2_Stage2",
+									"Puzzle3_L2T2_Stage2"
+								],
+								"subfolders": [],
+								"name": "Stage2"
+							},
+							{
+								"items": [
+									"Puzzle1_L2T2_Stage3",
+									"Puzzle2_L2T2_Stage3",
+									"Puzzle3_L2T2_Stage3",
+									"Piece1_L2T2_Stage3",
+									"Piece2_L2T2_Stage3",
+									"Piece3_L2T2_Stage3",
+									"Banner_L2T2_Stage3"
+								],
+								"subfolders": [],
+								"name": "Stage3"
+							},
+							{
+								"items": [
+									"Banner_L2T2_Stage4",
+									"Puzzle1_L2T2_Stage4",
+									"Puzzle2_L2T2_Stage4",
+									"Puzzle3_L2T2_Stage4",
+									"Piece1_L2T2_Stage4",
+									"Piece2_L2T2_Stage4",
+									"Piece3_L2T2_Stage4"
+								],
+								"subfolders": [],
+								"name": "Stage4"
+							},
+							{
+								"items": [
+									"Banner_L2T2_Stage5",
+									"Puzzle1_L2T2_Stage5",
+									"Puzzle2_L2T2_Stage5",
+									"Puzzle3_L2T2_Stage5",
+									"Puzzle4_L2T2_Stage5",
+									"Piece1_L2T2_Stage5",
+									"Piece2_L2T2_Stage5",
+									"Piece3_L2T2_Stage5",
+									"Piece4_L2T2_Stage5"
+								],
+								"subfolders": [],
+								"name": "Stage5"
+							}
+						],
+						"name": "Level2-2"
 					}
 				],
 				"name": "Level2"
@@ -181,7 +266,6 @@
 					"Wipe2",
 					"Ready",
 					"Retry",
-					"PuzzleHolder",
 					"BannerTimer",
 					"Go",
 					"home",
@@ -218,13 +302,25 @@
 				"subfolders": [
 					{
 						"items": [
-							"Lay-L2T1-Intro1",
+							"Lay_L2T1-Intro1",
 							"Lay_L2T1-Intro2",
 							"Lay_L2T1-Intro3",
 							"Lay_L2T1"
 						],
 						"subfolders": [],
 						"name": "Level2-1"
+					},
+					{
+						"items": [
+							"Lay_L2T2-Intro",
+							"Lay_L2T2-Stage1",
+							"Lay_L2T2-Stage2",
+							"Lay_L2T2-Stage3",
+							"Lay_L2T2-Stage4",
+							"Lay_L2T2-Stage5"
+						],
+						"subfolders": [],
+						"name": "Level2-2"
 					}
 				],
 				"name": "Level2"
@@ -249,13 +345,25 @@
 				"subfolders": [
 					{
 						"items": [
-							"ES-L2T1-Intro1",
+							"ES_L2T1-Intro1",
 							"ES_L2T1-Intro3",
 							"ES_L2T1",
 							"ES_L2T1-Intro2"
 						],
 						"subfolders": [],
 						"name": "Level2-1"
+					},
+					{
+						"items": [
+							"ES_L2T2-Intro",
+							"ES_L2T2-Stage1",
+							"ES_L2T2-Stage2",
+							"ES_L2T2-Stage3",
+							"ES_L2T2-Stage4",
+							"ES_L2T2-Stage5"
+						],
+						"subfolders": [],
+						"name": "Level2-2"
 					}
 				],
 				"name": "Level2"

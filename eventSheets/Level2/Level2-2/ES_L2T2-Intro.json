@@ -1,0 +1,54 @@
+{
+	"name": "ES_L2T2-Intro",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 341634580903942
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 554453831576966,
+					"parameters": {
+						"audio-file": {
+							"path": "Level2/diruang kelas"
+						},
+						"loop": "looping",
+						"volume": "2",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 565139523807954
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 196101515625477
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 844854076809110,
+					"parameters": {
+						"layout": "Lay_L2T2-Stage1"
+					}
+				}
+			],
+			"sid": 910456980469353
+		}
+	],
+	"sid": 132702554771597
+}

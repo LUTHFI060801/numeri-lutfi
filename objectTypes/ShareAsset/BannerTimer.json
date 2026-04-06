@@ -2,7 +2,7 @@
 	"name": "BannerTimer",
 	"plugin-id": "Sprite",
 	"sid": 572852202668281,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],

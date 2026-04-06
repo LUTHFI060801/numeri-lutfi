@@ -1,0 +1,63 @@
+{
+	"name": "Piece2_L2T2_Stage4",
+	"plugin-id": "Sprite",
+	"sid": 993153167094337,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 855787885739765
+		},
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 283738225899550
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 266,
+						"height": 206,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2121755,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5714285714285714,
+								0,
+								0.9962406015037594,
+								1,
+								0.4398496240601504,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 424480127432433,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

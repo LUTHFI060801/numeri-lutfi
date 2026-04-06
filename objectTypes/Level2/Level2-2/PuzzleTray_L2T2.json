@@ -1,0 +1,56 @@
+{
+	"name": "PuzzleTray_L2T2",
+	"plugin-id": "Sprite",
+	"sid": 311046260368253,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 697,
+						"height": 459,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 446888,
+						"collisionPoly": {
+							"points": [
+								0.08751793400286945,
+								0,
+								0.9827833572453372,
+								0.0718954248366013,
+								0.9956958393113343,
+								0.12636165577342048,
+								0.9956958393113343,
+								0.8605664488017429,
+								0.9096126255380201,
+								0.9891067538126361,
+								0.0028694404591104736,
+								0.8562091503267973
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 227321049913648,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

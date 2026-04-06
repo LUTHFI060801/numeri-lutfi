@@ -2,7 +2,7 @@
 	"name": "Timer",
 	"plugin-id": "Text",
 	"sid": 837920632573746,
-	"isGlobal": false,
+	"isGlobal": true,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [],
 	"behaviorTypes": [],
